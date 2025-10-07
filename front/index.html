@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Погода по часам</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>График температуры</h1>
+<h2>⚠️ Город нужно вводить только <strong>на английском языке</strong></h2>
+
+<div class="controls">
+    <input id="cityInput" type="text" placeholder="Введите город (например, Warsaw)" />
+    <button id="loadBtn">Показать</button>
+</div>
+
+<div id="chart-container">
+    <canvas id="tempChart" width="800" height="400"></canvas>
+    <div id="message" class="hidden"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
