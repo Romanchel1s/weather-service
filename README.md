@@ -24,6 +24,36 @@
 Чтобы использовать откройте index.html в браузере.
 
 ---
+
+## Установка и запуск
+1. Склонируйте репозиторий:
+
+```bash
+git clone <repo-url>
+cd weather-service
+```
+
+2. В корне проекта выполните:
+```bash
+docker-compose up --build
+```
+
+3. Проверка работы
+```bash
+curl http://localhost:8080/weather?city=Moscow
+
+```
+4. Остановка и очистка
+```bash
+docker-compose down
+```
+Очистить данные Redis (если нужно):
+```bash
+docker-compose down -v
+```
+
+---
+
 ## Структура проекта
 
 ```
@@ -54,32 +84,4 @@ src/
 │     ├─ IWeatherService
 │     └─ WeatherService
 └─ utils/ # Вспомогательные методы
-```
----
-
-## Установка и запуск
-1. Склонируйте репозиторий:
-
-```bash
-git clone <repo-url>
-cd weather-service
-```
-
-2. В корне проекта выполните:
-```bash
-docker-compose up --build
-```
-
-3. Проверка работы
-```bash
-curl http://localhost:8080/weather?city=Moscow
-
-```
-4. Остановка и очистка
-```bash
-docker-compose down
-```
-Очистить данные Redis (если нужно):
-```bash
-docker-compose down -v
 ```
